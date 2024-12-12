@@ -1,3 +1,23 @@
 <h1>Posts#index</h1>
 <p>Find me in app/views/posts/index.html.erb</p>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%- @posts.each do |post| %>
+    <tr>
+      <td>
+        <%= post.title %>
+      </td>
+      <td>
+        <%= post.description %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 <%= link_to "post作成", new_post_url %>

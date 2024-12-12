@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @posts = current_user.posts
   end
 
   def show
@@ -11,7 +12,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.build(posts_params)
+    post = current_user.posts.build(posts_params)
+    # post = Post.build(posts_params)
 
     Rails.logger.debug "#{post.inspect}"
 
