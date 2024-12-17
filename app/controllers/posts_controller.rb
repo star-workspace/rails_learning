@@ -2,7 +2,10 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @posts = current_user.posts
+    search_title = params[:title]
+    @posts = current_user.posts.where(title: search_title)
+    Rails.logger.info @posts.inspect
+    Rails.logger.info search_title
   end
 
   def show
