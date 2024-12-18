@@ -68,6 +68,9 @@ group :development do
   gem "rubocop-rspec", require: false
   gem "rubocop-packaging", require: false
   gem "rubocop-md", require: false
+
+  # デバッグ用
+  gem 'pry-rails'
 end
 
 group :test do
