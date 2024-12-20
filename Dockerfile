@@ -7,7 +7,8 @@ RUN apt-get update -qq && apt-get install -y \
   default-libmysqlclient-dev \
   nodejs \
   yarn \
-  imagemagick
+  imagemagick \
+  vim
 
 # 作業ディレクトリの作成
 WORKDIR /app
