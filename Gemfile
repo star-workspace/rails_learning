@@ -44,9 +44,6 @@ gem "thruster", require: false
 gem "devise"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
-
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
 
@@ -55,6 +52,11 @@ group :development, :test do
 
   # テスト用Rspec
   gem "rspec-rails"
+
+  # デバッグ用
+  gem "pry"
+  gem "pry-rails"
+  gem "pry-byebug"
 end
 
 group :development do
@@ -68,9 +70,6 @@ group :development do
   gem "rubocop-rspec", require: false
   gem "rubocop-packaging", require: false
   gem "rubocop-md", require: false
-
-  # デバッグ用
-  gem 'pry-rails'
 end
 
 group :test do

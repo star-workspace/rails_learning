@@ -16,6 +16,8 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: password
       MYSQL_DATABASE: rails_learning_development
+    tty: true
+    stdin_open: true
     depends_on:
       - db
 
